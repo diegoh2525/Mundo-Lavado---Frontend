@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservas - Mundo Lavado</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../../asset/css/estilos-reserva.css">
+  <script src="../../js/MundoLavado/reserva-cliente.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="/view/Cliente/vista-cliente.html" class="logo">
+      Mundo Lavado <span class="badge-cliente">Cliente</span>
+    </a>
+    <div class="menu">
+      <a href="#">Servicios</a>
+      <a href="#">¿Quiénes Somos?</a>
+      <a href="#">Contacto</a>
+
+      <div class="perfil-dropdown">
+        <i class="fas fa-user-circle icono-perfil" onclick="togglePerfilMenu()"></i>
+        <div id="menuPerfil" class="menu-perfil">
+          <a href="/view/Cliente/perfil-cliente.html">👤 Mi Perfil</a>
+          <a href="/view/Cliente/mis-reservas.html">📅 Mis Reservas</a>
+          <a href="#" onclick="cerrarSesion()">🚪 Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulario de Reserva -->
+  <main class="contenedor-reserva">
+    <h2>Agenda tu Servicio de Lavado</h2>
+    <p>Selecciona el tipo de vehículo, tipo de lavado y la fecha de tu visita</p>
+
+    <form id="form-reserva-lavado">
+      <div class="campo">
+        <label for="tipo-vehiculo">Tipo de Vehículo</label>
+        <select id="tipo-vehiculo" required>
+          <option value="">Selecciona...</option>
+          <option value="Carro">Carro</option>
+          <option value="Moto">Moto</option>
+          <option value="Camioneta">Camioneta</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="tipo-lavado">Tipo de Lavado</label>
+        <select id="tipo-lavado" required>
+          <option value="">Selecciona...</option>
+          <option value="Lavado básico">Lavado básico</option>
+          <option value="Lavado premium">Lavado premium</option>
+          <option value="Lavado con encerado">Lavado con encerado</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="fecha">Fecha de la reserva</label>
+        <input type="date" id="fecha" required>
+      </div>
+
+      <button type="submit" class="btn-reservar">Confirmar Reserva</button>
+    </form>
+
+    <div id="mensaje-confirmacion" class="oculto">
+      <p>¡Gracias por reservar con Mundo Lavado! Te esperamos en tu cita.</p>
+    </div>
+  </main>
+
+  <footer>
+    Desarrollado por JD Herrera &copy; 2025 - Mundo Lavado
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="../../asset/js/reservaLavadoCatalogo.js"></script>
+</body>
+</html>

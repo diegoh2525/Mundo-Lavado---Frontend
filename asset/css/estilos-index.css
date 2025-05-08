@@ -1,0 +1,266 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* NAVBAR */
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #2C3E50; /* Azul oscuro profesional */
+    position: sticky;
+    top: 0;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #00B894; /* Verde limpio */
+}
+
+.btn-reservar {
+    background-color: #00B894;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #55efc4;
+    color: #2C3E50;
+}
+
+/* HERO */
+.hero {
+    background: url('/asset/img/auto.jpg') center center / contain no-repeat;
+    background-size: cover; /* puedes probar con 'contain' si no quieres que se recorte */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    height: 90vh; /* Ajusta la altura según lo que necesites */
+}
+
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Testimonios */
+.experiencias {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.experiencias h3 {
+    font-size: 32px;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: left;
+}
+
+.card p {
+    font-style: italic;
+}
+
+.card .usuario {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #2C3E50;
+}
+
+/* SERVICIOS */
+.servicios {
+    padding: 60px 20px;
+    background-color: #E8F6F3;
+    text-align: center;
+}
+
+.servicios h3 {
+    font-size: 32px;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
+/* CONTACTO */
+.contacto {
+    background: url('/asset/img/lavado.jpg') center/cover no-repeat;
+    background-size: cover; /* puedes probar con 'contain' si no quieres que se recorte */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+    height: 100vh; /* Ajusta la altura según lo que necesites */
+}
+
+.contacto h3 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.contacto p {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto input,
+.contacto textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contacto button {
+    padding: 15px;
+    background-color: #00B894;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contacto button:hover {
+    background-color: #55efc4;
+    color: #2C3E50;
+}
+
+/* FOOTER */
+footer {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #00B894;
+}
+
+/* TOAST */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #00B894;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: visibility 0s, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

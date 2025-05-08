@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenido a Mundo Lavado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../asset/css/estilos-index.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Mundo Lavado</a>
+        <div class="menu">
+            <a href="#">Servicios</a>
+            <a href="#hero">¿Quiénes Somos?</a>
+            <a href="#contacto">Contacto</a>
+            <button class="btn-reservar" onclick="location.href='./view/Cliente/login.html'">Iniciar Sesión</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <h2>Explora, Reserva y Cuida tu Carro</h2>
+        <p>En Mundo Lavado llevamos el servicio de limpieza automotriz hasta tu puerta. Rápido, ecológico y confiable.</p>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios">
+        <h3>Nuestros Servicios</h3>
+        <div class="cards">
+            <div class="card">
+                <p>🚿 Lavado exterior e interior con productos biodegradables.</p>
+            </div>
+            <div class="card">
+                <p>🌱 Lavado ecológico sin uso excesivo de agua.</p>
+            </div>
+            <div class="card">
+                <p>✨ Pulido, encerado y detalles premium a domicilio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="experiencias">
+        <h3>Lo que dicen nuestros clientes</h3>
+        <div class="cards">
+            <div class="card">
+                <p>"Mi carro quedó como nuevo y sin salir de casa. Excelente servicio."</p>
+                <div class="usuario">– Javier C.</div>
+            </div>
+            <div class="card">
+                <p>"Los contacté en minutos y llegaron puntuales. Súper profesionales."</p>
+                <div class="usuario">– Luisa F.</div>
+            </div>
+            <div class="card">
+                <p>"Usan productos ecológicos y eso me encantó. Muy recomendados."</p>
+                <div class="usuario">– Miguel T.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+        <h3>Contáctanos</h3>
+        <p>¿Tienes dudas o deseas agendar tu servicio? ¡Escríbenos!</p>
+        <form id="form-contacto">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu correo electrónico" required />
+            <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+            <div id="toast" class="toast">¡Gracias por contactarnos! Te responderemos pronto.</div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Desarrollado por JD Herrera &copy; 2025 - Mundo Lavado
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("form-contacto").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const toast = document.getElementById("toast");
+            toast.classList.add("show");
+            this.reset();
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 4000);
+        });
+    </script>
+
+</body>
+
+</html>
