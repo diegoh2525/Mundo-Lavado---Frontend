@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bienvenido a Mundo Lavado</title>
+  <link rel="icon" href="/asset/img/logo-mundo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="../../js/ProyectoFinal/vista-cliente.js"></script>
@@ -18,9 +20,7 @@
       Mundo Lavado <span class="badge-cliente">Cliente</span>
     </a>
     <div class="menu">
-      <a href="#">Servicios</a>
-      <a href="#">¿Quiénes Somos?</a>
-      <a href="#">Contacto</a>
+      <a href="#servicios">Servicios</a>
       <button class="btn-reservar" onclick="location.href='/view/Cliente/reserva-cliente.html'">Reservar</button>
 
       <div class="perfil-dropdown">
@@ -38,6 +38,22 @@
   <section class="hero">
     <h2>¿Listo para dejar tu vehículo reluciente, <span id="nombreHero">cliente</span>?</h2>
     <button class="btn-hero" onclick="location.href='/view/Cliente/reserva-cliente.html'">¡Reserva tu lavado!</button>
+  </section>
+
+  <!-- Servicios -->
+  <section class="servicios" id="servicios">
+    <h3>Nuestros Servicios</h3>
+    <div class="cards">
+      <div class="card">
+        <p>🚿 Lavado exterior e interior con productos biodegradables.</p>
+      </div>
+      <div class="card">
+        <p>🌱 Lavado ecológico sin uso excesivo de agua.</p>
+      </div>
+      <div class="card">
+        <p>✨ Pulido, encerado y detalles premium a domicilio.</p>
+      </div>
+    </div>
   </section>
 
   <!-- TESTIMONIOS -->
@@ -79,4 +95,5 @@
   </div>
 
 </body>
+
 </html>

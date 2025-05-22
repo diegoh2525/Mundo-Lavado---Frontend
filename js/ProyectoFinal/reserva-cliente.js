@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formReserva.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        const nombreCliente = localStorage.getItem("nombreCliente") || "Anónimo";
+        const nombreCliente = localStorage.getItem("nombreCliente") || "cliente";
 
         const reserva = {
             cliente: nombreCliente,
@@ -59,3 +59,4 @@ async function cargarOpciones(idSelect, url) {
         console.error(`Error cargando ${idSelect}:`, error);
     }
 }
+

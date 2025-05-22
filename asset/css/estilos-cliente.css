@@ -143,6 +143,19 @@ nav.navbar {
     color: #2C3E50;
 }
 
+/* SERVICIOS */
+.servicios {
+    padding: 60px 20px;
+    background-color: #E8F6F3;
+    text-align: center;
+}
+
+.servicios h3 {
+    font-size: 32px;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
 /* FOOTER */
 footer {
     background: #2C3E50;
