@@ -23,7 +23,7 @@ async function login() {
     const usuario = await response.json();
     console.log("Usuario logueado:", usuario);
 
-    // 👇 Guardamos el nombre del usuario para futuras páginas
+    //Guarda el nombre del usuario para futuras páginas
     localStorage.setItem("nombreCliente", usuario.nombre);
 
     window.location.href = window.location.href = "vista-cliente.html";

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reservas</title>
   <link rel="icon" href="/asset/img/logo-mundo.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../../asset/css/estilos-reserva.css">
   <script src="../../js/MundoLavado/reserva-cliente.js"></script>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -38,6 +40,7 @@
     <p>Selecciona el tipo de vehículo, tipo de lavado y la fecha de tu visita</p>
 
     <form id="form-reserva-lavado">
+      <!-- Tipo de Vehículo -->
       <div class="campo">
         <label for="tipo-vehiculo">Tipo de Vehículo</label>
         <select id="tipo-vehiculo" required>
@@ -48,6 +51,7 @@
         </select>
       </div>
 
+      <!-- Tipo de Lavado -->
       <div class="campo">
         <label for="tipo-lavado">Tipo de Lavado</label>
         <select id="tipo-lavado" required>
@@ -58,13 +62,28 @@
         </select>
       </div>
 
+      <!-- Fecha -->
       <div class="campo">
         <label for="fecha">Fecha de la reserva</label>
         <input type="date" id="fecha" required>
       </div>
 
+      <!-- Hora -->
+      <div class="campo">
+        <label for="hora">Hora de la reserva</label>
+        <input type="time" id="hora" required>
+      </div>
+
+      <!-- Ubicación -->
+      <div class="campo">
+        <label for="ubicacion">Ubicación</label>
+        <input type="text" id="ubicacion" placeholder="Ej: Calle 10 #5-20" required>
+      </div>
+
+      <!-- Botón -->
       <button type="submit" class="btn-reservar">Confirmar Reserva</button>
     </form>
+
 
     <div id="mensaje-confirmacion" class="oculto">
       <p>¡Gracias por reservar con Mundo Lavado! Te esperamos en tu cita.</p>
@@ -82,4 +101,5 @@
 
   <script src="../../asset/js/reservaLavadoCatalogo.js"></script>
 </body>
+
 </html>
